@@ -185,7 +185,7 @@ def convert_sequence(filename, idx, args):
         lidar3d, seg3d, det3d = decode_frame(frame, frame_id)
 
         for prefix, data in zip(
-            ['lidar', 'seg', 'obj'], [lidar3d, seg3d, det3d]
+            ['lidars', 'seg3d', 'annos'], [lidar3d, seg3d, det3d]
         ):
             folder = os.path.join(
                          args.output_path,
@@ -212,7 +212,7 @@ def parse_args():
                         3) objects (boxes and classes)
 
                     example:
-                        python tools/processor.py <input_path> <output_path>
+                        python tools/waymo_convertor.py <input_path> <output_path>
                     """,
         formatter_class=argparse.RawTextHelpFormatter
         )
