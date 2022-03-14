@@ -16,12 +16,13 @@ sudo bash bazel-${BAZEL_VERSION}-installer-linux-x86_64.sh
 sudo apt install build-essential
 ```
 
-user level installation:
+### user level installation:
 ```
 BAZEL_VERSION=3.1.0
 wget https://github.com/bazelbuild/bazel/releases/download/${BAZEL_VERSION}/bazel-${BAZEL_VERSION}-installer-linux-x86_64.sh
 bash bazel-${BAZEL_VERSION}-installer-linux-x86_64.sh --user
 ```
+This process will tell you where bazel is located. Make sure PATH contains that folder.
 
 ```
 ./configure.sh
