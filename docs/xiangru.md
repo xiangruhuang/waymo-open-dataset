@@ -7,13 +7,20 @@ Don't use `tf 2.4.0` since keras does not have a version that matches.
 pip3 install waymo-open-dataset-tf-2-5-0 --user
 ```
 
-## Step 2: install bazel
+## Step 2: install bazel (sudo)
 ```
 sudo apt-get install --assume-yes pkg-config zip g++ zlib1g-dev unzip python3 python3-pip
 BAZEL_VERSION=3.1.0
 wget https://github.com/bazelbuild/bazel/releases/download/${BAZEL_VERSION}/bazel-${BAZEL_VERSION}-installer-linux-x86_64.sh
 sudo bash bazel-${BAZEL_VERSION}-installer-linux-x86_64.sh
 sudo apt install build-essential
+```
+
+user level installation:
+```
+BAZEL_VERSION=3.1.0
+wget https://github.com/bazelbuild/bazel/releases/download/${BAZEL_VERSION}/bazel-${BAZEL_VERSION}-installer-linux-x86_64.sh
+bash bazel-${BAZEL_VERSION}-installer-linux-x86_64.sh --user
 ```
 
 ```
