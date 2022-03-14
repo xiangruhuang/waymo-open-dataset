@@ -185,7 +185,7 @@ def convert_sequence(filename, idx, args):
         lidar3d, seg3d, det3d = decode_frame(frame, frame_id)
 
         for prefix, data in zip(
-            ['lidars', 'seg3d', 'annos'], [lidar3d, seg3d, det3d]
+            ['lidar', 'seg3d', 'annos'], [lidar3d, seg3d, det3d]
         ):
             folder = os.path.join(
                          args.output_path,
